@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <p>Task 2</p>
+    <p id="sourceArray">Source Array: </p>
+    <p id="searchedWord">2.1 Searched Word: </p>
+    <p id="changedFirstWord">2.2 Changed First Word: </p>
+    <p id="arrayWithoutLastItem">2.3 Array Without Last Item: </p>
+    <p id="arrayWithNewItem">2.4 Array With New Item: </p>
+    <p id="joinVolvoAndBMW">2.5 Join Volvo and BMW: </p>
+    <p>I don't undestand exactly what should I do in task 2.5 because this task says "splice "Volvo" and "BMW" " but splice method changes the contents of an array by removing or replacing existing elements and/or adding new elements.</p>
+
+    <script>
+        // task 1
+
+        let text = "I can eat bananas all day";
+
+        let searched_word = text.slice(10, 17)
+        searched_word = searched_word.toUpperCase()
+
+        alert(searched_word)
+
+        // task 2
+
+        let array = ["Saab", "Volvo", "BMW"]
+        document.getElementById("sourceArray").innerHTML += array
+        
+        // 1
+        let bmv_value = array[2]
+        document.getElementById("searchedWord").innerHTML += bmv_value
+
+        // 2
+        array[0] = array[0] + "a"
+        document.getElementById("changedFirstWord").innerHTML += array[0]
+
+        // 3
+        array = array.slice(0, array.length - 1)
+        document.getElementById("arrayWithoutLastItem").innerHTML += array
+
+        // 4
+        array.push("Audi")
+        document.getElementById("arrayWithNewItem").innerHTML += array
+
+        // 5
+        array[1] = array[1] + "BMW"
+        document.getElementById("joinVolvoAndBMW").innerHTML += array
+
+    </script>
+</body>
+
+</html>
